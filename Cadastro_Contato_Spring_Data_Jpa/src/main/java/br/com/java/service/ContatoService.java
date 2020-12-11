@@ -10,11 +10,11 @@ public interface ContatoService {
 	
 	List<Contato> buscar (String contato);
 	
-	Contato buscarPorID(Integer id);
+	Contato findOne(Integer id);
 	
 	void salvar(Contato contato);
 	
-	void deletar (Integer id);
+	void delete (Integer id);
 	
 
 }
