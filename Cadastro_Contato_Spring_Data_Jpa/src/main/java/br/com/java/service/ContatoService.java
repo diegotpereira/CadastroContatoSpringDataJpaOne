@@ -6,13 +6,13 @@ import br.com.java.entity.Contato;
 
 public interface ContatoService {
 	
-	Iterable<Contato> buscarTodos();
+	Iterable<Contato> findAll();
 	
-	List<Contato> buscar (String contato);
+	List<Contato> search (String contato);
 	
 	Contato findOne(Integer id);
 	
-	void salvar(Contato contato);
+	void save(Contato contato);
 	
 	void delete (Integer id);
 	

@@ -16,13 +16,13 @@ public class ContatoServiceImpl implements ContatoService{
 	private ContatoRepository repo;
 
 	@Override
-	public Iterable<Contato> buscarTodos() {
+	public Iterable<Contato> findAll() {
 		// TODO Auto-generated method stub
 		return repo.findAll();
 	}
 
 	@Override
-	public List<Contato> buscar(String contato) {
+	public List<Contato> search(String contato) {
 		// TODO Auto-generated method stub
 		return repo.buscarPorNome(contato);
 	}
@@ -37,7 +37,7 @@ public class ContatoServiceImpl implements ContatoService{
 	}
 
 	@Override
-	public void salvar(Contato contato) {
+	public void save(Contato contato) {
 		// TODO Auto-generated method stub
 		repo.save(contato);
 		
