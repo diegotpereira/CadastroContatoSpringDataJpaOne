@@ -11,7 +11,7 @@
     <form class="form-inline" action="#" th:action="@{/contato/search}"
      method="get">
      <input class="form-control mr-sm-2" type="search" nome="term"
-      placeholder="Search by nome ..." />
+      placeholder="Buscar por nome ..." />
      <button class="btn btn-primary" type="submit">
       <i class="fa fa-search"></i> Buscar
      </button>
@@ -37,13 +37,13 @@
     </button>
    </div>
 
-   <th:block th:if="${#listas.isEmpty(contatos)}">
+   <th:block th:if="${#lists.isEmpty(contatos)}">
     <h5>Sem contatos</h5>
    </th:block>
 
-   <th:block th:unless="${#listas.isEmpty(contatos)}">
+   <th:block th:unless="${#lists.isEmpty(contatos)}">
     <div class="table-responsive">
-     <h5>List of contatos</h5>
+     <h5>Lista de contatos</h5>
      <table class="table table-bordered table-hover">
       <thead>
        <tr>
