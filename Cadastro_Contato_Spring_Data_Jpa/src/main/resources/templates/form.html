@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <nav th:replace="layout :: header"></nav>
+
+ <div class="container" id="main-content">
+  <div class="row d-flex justify-content-center">
+   <form style="min-width: 300px;" action="#"
+    th:action="@{/contato/save}" th:object="${contato}" method="post"
+    novalidate="novalidate">
+    <h5 class="text-center">contato form</h5>
+
+    <input type="hidden" th:field="*{id}" />
+
+    <div class="form-group">
+     <input class="form-control" type="text" placeholder="contato nome"
+      th:field="*{nome}" th:errorclass="field-error" /> <em
+      th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></em>
+    </div>
+
+    <div class="form-group">
+     <input class="form-control" type="email"
+      placeholder="contato email" th:field="*{email}"
+      th:errorclass="field-error" /> <em
+      th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></em>
+    </div>
+
+    <div class="form-group">
+     <input class="form-control" type="text" placeholder="contato telefone"
+      th:field="*{telefone}" />
+    </div>
+
+    <div class="form-group">
+     <button type="submit" class="btn btn-block btn-primary">
+      <i class="fa fa-save"></i> Save
+     </button>
+    </div>
+   </form>
+  </div>
+ </div>
+ <!-- /.container -->
+
+ <footer th:replace="layout :: footer"></footer>
+
+</body>
+</html>
