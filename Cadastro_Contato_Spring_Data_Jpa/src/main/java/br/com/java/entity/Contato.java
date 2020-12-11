@@ -21,13 +21,13 @@ public class Contato {
 	@Column(name="id", nullable=false)
 	private Integer id;
 	
-	@SuppressWarnings("deprecation")
-	@NotEmpty
+//	@SuppressWarnings("deprecation")
+//	@NotEmpty
 	@Column(name = "nome", nullable = false)
 	private String nome;
 	
-	@SuppressWarnings("deprecation")
-	@Email
+//	@SuppressWarnings("deprecation")
+//	@Email
 	@Column(name="email")
 	private String email;
 	
@@ -36,7 +36,7 @@ public class Contato {
 	
 	public Contato() {}
 
-	public Contato(Integer id, @NotEmpty String nome, @Email String email, String telefone) {
+	public Contato(Integer id, String nome, String email, String telefone) {
 //		super();
 		this.id = id;
 		this.nome = nome;

@@ -1,5 +1,7 @@
 package br.com.java.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,15 +41,17 @@ public class ContatoController {
 		model.addAttribute("contatos", contatoService.findAll());
 		return "lista";
 	}
-//	@GetMapping("/contato/search")
-//	public String search (@RequestParam("nome") String nome, Model model) {
-//		if (StringUtils.isEmpty(nome)) {
-//			return "redirect:/contato";
-//		}
-//		model.addAttribute("contatos",contatoService.buscarPorNome(nome));
-//		return "lista";
-//	}
-//	@GetMapping("/contato/add")
+	@GetMapping("/contato/search")
+	public String search (@RequestParam("nome") String nome, Model model) {
+		if (StringUtils.isEmpty(nome)) {
+			return "redirect:/contato";
+		}
+		model.addAttribute("contatos",contatoService.search(nome));
+		return "lista";
+	}
+
+
+
 	@GetMapping("/contato/add")
 	public String add (Model model) {
 		model.addAttribute("contato", new Contato());

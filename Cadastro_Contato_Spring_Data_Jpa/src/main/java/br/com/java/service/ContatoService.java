@@ -12,7 +12,7 @@ public interface ContatoService {
 	
 	Iterable<Contato> findAll();
 	
-//	List<Contato> buscarPorNome (String nome);
+	List<Contato> search (String nome);
 	
 	Optional<Contato> findOne(Integer id);
 	

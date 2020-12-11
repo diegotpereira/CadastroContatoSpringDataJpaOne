@@ -31,10 +31,10 @@ public class ContatoServiceImpl implements ContatoService{
 	}
 
 //	@Transactional
-//	public List<Contato> buscarPorNome(String nome) {
-//		// TODO Auto-generated method stub
-//		return contatoRepository.buscarPorNome(nome);
-//	}
+	public List<Contato> search(String nome) {
+		// TODO Auto-generated method stub
+		return contatoRepository.findByNome(nome);
+	    }
 
 	 @Override
 //	 @Transactional
