@@ -10,6 +10,6 @@ import br.com.java.entity.Contato;
 @Repository
 public interface ContatoRepository extends CrudRepository<Contato, Integer>{
 	
-	List<Contato> buscarPorNome(String contato);
+//	List<Contato> buscarPorNome(String nome);
 
 }
